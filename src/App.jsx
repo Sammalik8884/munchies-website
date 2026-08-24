@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { useEffect } from 'react'
 import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -11,12 +12,22 @@ import Brands from './pages/Brands'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
 
+// Scrolls to top on every route change
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' })
+  }, [pathname])
+  return null
+}
+
 function App() {
   const location = useLocation()
 
   return (
     <LanguageProvider>
       <div className="app">
+        <ScrollToTop />
         <Navbar />
         <AnimatePresence mode="wait">
           <Routes location={location} key={location.pathname}>

@@ -109,7 +109,7 @@ export default function About() {
       <section style={{ background: 'var(--bg-dark)', padding: '60px 0' }}>
         <div className="container">
           <motion.div
-            style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}
+            className="about-dark-stats"
             variants={container}
             initial="hidden"
             whileInView="show"
@@ -124,7 +124,7 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={fadeUp}
-                style={{ textAlign: 'center', padding: '24px', borderRight: i < 3 ? '1px solid rgba(255,255,255,0.1)' : 'none' }}
+                className={`about-dark-stat-item${i < 3 ? ' has-border' : ''}`}
               >
                 <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 900, color: 'var(--primary)' }}>
                   {s.num}
@@ -137,6 +137,7 @@ export default function About() {
           </motion.div>
         </div>
       </section>
+
     </PageTransition>
   )
 }

@@ -67,9 +67,10 @@ export const translations = {
       designed: 'Designed with',
       inPakistan: 'in Pakistan',
       address: '23-AM, Ferozpur Road, Lahore, Pakistan',
-      phone: '+92 300 1234567',
-      whatsapp: '+92 301 7654321',
-      email: 'info@munchies.com.pk',
+      phone: '+92 335 1497701',
+      whatsapp: '+92 335 1497701',
+      email: 'Munchiespk24@gmail.com',
+
       hours: 'Mon–Sat: 9:00 AM – 6:00 PM',
     },
     about: {
@@ -129,8 +130,9 @@ export const translations = {
       label: 'CONTACT US',
       title: "We'd love to hear from you.",
       address: { label: 'Head Office', value: '23-AM, Ferozpur Road, Lahore, Pakistan' },
-      phone: { label: 'Phone / WhatsApp', value: '+92 300 1234567\n+92 301 7654321' },
-      email: { label: 'Email', value: 'info@munchies.com.pk' },
+      phone: { label: 'Phone / WhatsApp', value: '+92 335 1497701' },
+      email: { label: 'Email', value: 'Munchiespk24@gmail.com' },
+
       hours: { label: 'Business Hours', value: 'Monday – Saturday\n9:00 AM – 6:00 PM' },
       form: {
         title: 'Send us a Message',
@@ -207,9 +209,10 @@ export const translations = {
       designed: 'ڈیزائن کیا گیا',
       inPakistan: 'پاکستان میں',
       address: '23-AM، فیروزپور روڈ، لاہور، پاکستان',
-      phone: '+92 300 1234567',
-      whatsapp: '+92 301 7654321',
-      email: 'info@munchies.com.pk',
+      phone: '+92 335 1497701',
+      whatsapp: '+92 335 1497701',
+      email: 'Munchiespk24@gmail.com',
+
       hours: 'پیر–ہفتہ: صبح 9 بجے – شام 6 بجے',
     },
     about: {
@@ -269,8 +272,9 @@ export const translations = {
       label: 'رابطہ کریں',
       title: 'ہم آپ سے سننا چاہتے ہیں۔',
       address: { label: 'ہیڈ آفس', value: '23-AM، فیروزپور روڈ، لاہور، پاکستان' },
-      phone: { label: 'فون / واٹس ایپ', value: '+92 300 1234567\n+92 301 7654321' },
-      email: { label: 'ای میل', value: 'info@munchies.com.pk' },
+      phone: { label: 'فون / واٹس ایپ', value: '+92 335 1497701' },
+      email: { label: 'ای میل', value: 'Munchiespk24@gmail.com' },
+
       hours: { label: 'کاروباری اوقات', value: 'پیر – ہفتہ\nصبح 9 بجے – شام 6 بجے' },
       form: {
         title: 'ہمیں پیغام بھیجیں',

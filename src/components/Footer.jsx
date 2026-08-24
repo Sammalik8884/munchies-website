@@ -52,7 +52,8 @@ export default function Footer() {
               <Globe size={16} />
               </motion.a>
               <motion.a
-                href="https://wa.me/923001234567"
+                href="https://wa.me/923351497701"
+
                 target="_blank"
                 className="social-link"
                 whileHover={{ scale: 1.1 }}
@@ -64,6 +65,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
+
           <div className="footer-col">
             <h4>{f.quickLinks}</h4>
             <ul>
@@ -108,17 +110,18 @@ export default function Footer() {
             </div>
             <div className="footer-contact-item">
               <Phone size={14} />
-              <span>{f.phone}</span>
+              <a href={`tel:${f.phone}`} style={{ color: 'inherit' }}>{f.phone}</a>
             </div>
             <div className="footer-contact-item">
               <Mail size={14} />
-              <span>{f.email}</span>
+              <a href={`mailto:${f.email}`} style={{ color: 'inherit' }}>{f.email}</a>
             </div>
             <div className="footer-contact-item">
               <Clock size={14} />
               <span>{f.hours}</span>
             </div>
           </div>
+
         </div>
       </div>
 
