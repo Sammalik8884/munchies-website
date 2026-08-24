@@ -67,7 +67,7 @@ ul { list-style: none; }
 /* ================================================
    UTILITIES
    ================================================ */
-.container { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .section-label {
   display: inline-flex;
@@ -96,7 +96,7 @@ ul { list-style: none; }
 
 .section-title {
   font-family: var(--font-heading);
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.75rem, 2.5vw, 2.4rem);
   font-weight: 900;
   color: var(--text-dark);
   line-height: 1.1;
@@ -219,9 +219,9 @@ ul { list-style: none; }
 
 .navbar-inner {
   display: flex; align-items: center; justify-content: space-between;
-  padding: 0 32px;
-  max-width: 1400px; margin: 0 auto;
-  height: 72px;
+  padding: 0 24px;
+  max-width: 1280px; margin: 0 auto;
+  height: 64px;
 }
 
 .navbar-logo {
@@ -346,9 +346,9 @@ ul { list-style: none; }
 
 .hero-inner {
   display: grid; grid-template-columns: 1fr 1.05fr;
-  align-items: center; gap: 48px;
-  padding: 60px 48px;
-  max-width: 1400px; margin: 0 auto; width: 100%;
+  align-items: center; gap: 40px;
+  padding: 48px 24px;
+  max-width: 1280px; margin: 0 auto; width: 100%;
   position: relative; z-index: 1;
 }
 
@@ -358,29 +358,29 @@ ul { list-style: none; }
   border: 1.5px solid rgba(204,0,0,0.18);
   border-radius: 50px;
   padding: 6px 16px 6px 8px;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 .hero-eyebrow-dot {
-  width: 24px; height: 24px;
+  width: 22px; height: 22px;
   background: var(--primary);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
 }
-.hero-eyebrow-dot svg { width: 12px; height: 12px; color: white; }
+.hero-eyebrow-dot svg { width: 11px; height: 11px; color: white; }
 .hero-eyebrow span {
   font-family: var(--font-heading);
-  font-size: 0.72rem; font-weight: 700;
+  font-size: 0.68rem; font-weight: 700;
   color: var(--primary); letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
 .hero-title {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 5.5vw, 5.5rem);
-  font-weight: 900; line-height: 0.98;
+  font-size: clamp(2.4rem, 4vw, 4rem);
+  font-weight: 900; line-height: 1.0;
   color: var(--text-dark);
-  margin-bottom: 22px;
-  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+  letter-spacing: -0.03em;
 }
 .hero-title .highlight {
   color: var(--primary);
@@ -506,12 +506,12 @@ ul { list-style: none; }
 
 .stats-inner {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  max-width: 1400px; margin: 0 auto; position: relative;
+  max-width: 1280px; margin: 0 auto; position: relative;
 }
 
 .stat-item {
-  display: flex; align-items: center; gap: 18px;
-  padding: 28px 36px;
+  display: flex; align-items: center; gap: 14px;
+  padding: 22px 24px;
   border-right: 1px solid rgba(255,255,255,0.15);
   position: relative; overflow: hidden;
   transition: var(--transition);
@@ -526,18 +526,18 @@ ul { list-style: none; }
 .stat-item:hover::before { background: rgba(255,255,255,0.07); }
 
 .stat-icon {
-  width: 52px; height: 52px;
+  width: 44px; height: 44px;
   background: rgba(255,255,255,0.12);
-  border-radius: 14px;
+  border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   border: 1px solid rgba(255,255,255,0.15);
   backdrop-filter: blur(4px);
 }
-.stat-icon svg { width: 24px; height: 24px; color: white; }
+.stat-icon svg { width: 20px; height: 20px; color: white; }
 .stat-text .number {
   font-family: var(--font-heading);
-  font-size: 2rem; font-weight: 900;
+  font-size: 1.6rem; font-weight: 900;
   color: var(--white); line-height: 1;
 }
 .stat-text .label {
@@ -549,7 +549,7 @@ ul { list-style: none; }
    PRODUCTS SECTION — Premium Cards
    ================================================ */
 
-.products-section { padding: 100px 0; background: var(--bg-cream); }
+.products-section { padding: 72px 0; background: var(--bg-cream); }
 .products-header { text-align: center; margin-bottom: 56px; }
 .products-header .section-divider { justify-content: center; }
 
@@ -658,8 +658,8 @@ ul { list-style: none; }
 
 .brands-inner {
   display: grid; grid-template-columns: 1fr auto;
-  align-items: center; gap: 60px;
-  max-width: 1400px; margin: 0 auto; padding: 0 48px;
+  align-items: center; gap: 40px;
+  max-width: 1280px; margin: 0 auto; padding: 0 24px;
 }
 
 .brands-left .label {
@@ -712,7 +712,7 @@ ul { list-style: none; }
 
 .anniversary-card {
   background: linear-gradient(145deg, #7A0000 0%, #B00000 35%, #CC0000 65%, #E31E24 100%);
-  padding: 64px 52px;
+  padding: 52px 40px;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
 }
@@ -741,14 +741,14 @@ ul { list-style: none; }
   text-transform: uppercase; margin-bottom: 4px; position: relative; z-index: 1;
 }
 .anniversary-years {
-  font-family: var(--font-heading); font-size: 6.5rem; font-weight: 900;
+  font-family: var(--font-heading); font-size: 5rem; font-weight: 900;
   color: var(--gold); line-height: 0.85;
   text-shadow: 0 0 60px rgba(255,184,0,0.4), 0 8px 32px rgba(0,0,0,0.3);
   position: relative; z-index: 1;
 }
 .anniversary-title {
-  font-family: var(--font-heading); font-size: 1.6rem; font-weight: 800;
-  color: var(--white); line-height: 1.2; margin-bottom: 12px;
+  font-family: var(--font-heading); font-size: 1.35rem; font-weight: 800;
+  color: var(--white); line-height: 1.2; margin-bottom: 10px;
   position: relative; z-index: 1;
 }
 .anniversary-subtitle {
@@ -759,7 +759,7 @@ ul { list-style: none; }
 
 .why-choose {
   background: var(--bg-light);
-  padding: 64px 52px;
+  padding: 52px 40px;
   display: flex; flex-direction: column; justify-content: center;
   position: relative; overflow: hidden;
 }
@@ -771,11 +771,11 @@ ul { list-style: none; }
   border-radius: 50%;
 }
 .why-choose h2 {
-  font-family: var(--font-heading); font-size: 1.8rem; font-weight: 900;
-  color: var(--text-dark); margin-bottom: 32px;
+  font-family: var(--font-heading); font-size: 1.5rem; font-weight: 900;
+  color: var(--text-dark); margin-bottom: 24px;
   letter-spacing: -0.02em;
 }
-.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .why-item { display: flex; align-items: flex-start; gap: 14px; }
 .why-icon {
   width: 44px; height: 44px;
@@ -803,10 +803,10 @@ ul { list-style: none; }
    ================================================ */
 
 .footer { background: var(--bg-darker); color: var(--white); }
-.footer-main { padding: 72px 0 44px; }
+.footer-main { padding: 56px 0 32px; }
 .footer-grid {
   display: grid; grid-template-columns: 2.2fr 1fr 1fr 1fr 1.6fr;
-  gap: 52px; max-width: 1400px; margin: 0 auto; padding: 0 48px;
+  gap: 36px; max-width: 1280px; margin: 0 auto; padding: 0 24px;
 }
 
 .footer-brand .navbar-logo-text {
@@ -862,8 +862,8 @@ ul { list-style: none; }
 
 .footer-bottom {
   border-top: 1px solid rgba(255,255,255,0.06);
-  padding: 22px 48px;
-  max-width: 1400px; margin: 0 auto;
+  padding: 18px 24px;
+  max-width: 1280px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
 }
 .footer-bottom p { font-size: 0.78rem; color: rgba(255,255,255,0.28); }
@@ -875,7 +875,7 @@ ul { list-style: none; }
 
 .page-hero {
   background: var(--bg-dark);
-  padding: 150px 48px 90px;
+  padding: 120px 24px 70px;
   position: relative; overflow: hidden;
 }
 .page-hero::before {
@@ -890,16 +890,16 @@ ul { list-style: none; }
 }
 .page-hero-orb {
   position: absolute;
-  width: 500px; height: 500px;
+  width: 400px; height: 400px;
   background: radial-gradient(circle, rgba(204,0,0,0.20) 0%, transparent 70%);
   border-radius: 50%;
-  right: -100px; top: -100px;
+  right: -80px; top: -80px;
   pointer-events: none;
 }
 .page-hero-inner {
-  max-width: 1400px; margin: 0 auto;
+  max-width: 1280px; margin: 0 auto;
   display: grid; grid-template-columns: 1fr 1fr;
-  align-items: center; gap: 48px;
+  align-items: center; gap: 40px;
   position: relative; z-index: 1;
 }
 .page-hero-content .label {
@@ -924,8 +924,8 @@ ul { list-style: none; }
    ABOUT PAGE
    ================================================ */
 
-.about-section { padding: 90px 0; background: var(--white); }
-.about-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.about-section { padding: 70px 0; background: var(--white); }
+.about-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .about-grid { display: grid; grid-template-columns: 5fr 6fr; gap: 64px; align-items: center; margin-bottom: 64px; }
 .about-image-wrap { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); position: relative; }
 .about-image-wrap::before {
@@ -965,8 +965,8 @@ ul { list-style: none; }
    DISTRIBUTION PAGE
    ================================================ */
 
-.distribution-section { padding: 90px 0; }
-.distribution-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.distribution-section { padding: 70px 0; }
+.distribution-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .distribution-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 64px; }
 
 .lahore-map {
@@ -1011,8 +1011,8 @@ ul { list-style: none; }
    PRODUCTS PAGE
    ================================================ */
 
-.products-page-section { padding: 90px 0; }
-.products-page-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.products-page-section { padding: 70px 0; }
+.products-page-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 
 .filter-tabs { display: flex; gap: 10px; margin-bottom: 44px; flex-wrap: wrap; }
 .filter-tab {
@@ -1059,8 +1059,8 @@ ul { list-style: none; }
    BRANDS PAGE
    ================================================ */
 
-.brands-page-section { padding: 90px 0; }
-.brands-page-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.brands-page-section { padding: 70px 0; }
+.brands-page-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .brands-page-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin-bottom: 64px; }
 
 .brand-page-card {
@@ -1104,8 +1104,8 @@ ul { list-style: none; }
    CAREERS PAGE
    ================================================ */
 
-.careers-section { padding: 90px 0; }
-.careers-inner { max-width: 1240px; margin: 0 auto; padding: 0 28px; }
+.careers-section { padding: 70px 0; }
+.careers-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .careers-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 64px; }
 
 .careers-image { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-lg); position: relative; }
@@ -1150,9 +1150,9 @@ ul { list-style: none; }
    CONTACT PAGE
    ================================================ */
 
-.contact-section { padding: 90px 0; }
+.contact-section { padding: 70px 0; }
 .contact-inner {
-  max-width: 1240px; margin: 0 auto; padding: 0 28px;
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
   display: grid; grid-template-columns: 1fr 1.5fr; gap: 64px; align-items: start;
 }
 
