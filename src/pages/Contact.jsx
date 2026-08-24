@@ -34,6 +34,16 @@ export default function Contact() {
     e.preventDefault()
     const errs = validate()
     if (Object.keys(errs).length) { setErrors(errs); return }
+
+    // Build mailto link — sends to Munchies email
+    const subject = encodeURIComponent(`Website Enquiry from ${formData.name}`)
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `Email: ${formData.email}\n` +
+      `Phone: ${formData.phone || 'N/A'}\n\n` +
+      `Message:\n${formData.message}`
+    )
+    window.open(`mailto:Munchiespk24@gmail.com?subject=${subject}&body=${body}`, '_blank')
     setSubmitted(true)
   }
 
@@ -122,7 +132,11 @@ export default function Contact() {
             {submitted ? (
               <div className="form-success">
                 <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
-                <div>{f.success}</div>
+                <div style={{ fontSize: '1.1rem', fontWeight: 700, marginBottom: 8 }}>Message Ready to Send!</div>
+                <div style={{ fontSize: '0.85rem', color: 'var(--text-light)', fontFamily: 'var(--font-body)', fontWeight: 400 }}>
+                  Your email client has opened with your message pre-filled.<br />
+                  Just hit <strong>Send</strong> to reach us at Munchiespk24@gmail.com
+                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} noValidate>
