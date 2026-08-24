@@ -1225,66 +1225,217 @@ ul { list-style: none; }
 .page-transition-wrapper { min-height: 100vh; }
 
 /* ================================================
-   RESPONSIVE
+   RESPONSIVE — Comprehensive Mobile Fix
    ================================================ */
 
+/* ── Tablet (≤1100px) ── */
 @media (max-width: 1100px) {
   .products-grid { grid-template-columns: repeat(3, 1fr); }
   .products-full-grid { grid-template-columns: repeat(3, 1fr); }
-  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 1fr 1fr 1fr; gap: 32px; padding: 0 28px; }
+  .footer-bottom { padding: 22px 28px; }
   .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .quality-badges { grid-template-columns: 1fr 1fr; }
   .brands-stats-bar { grid-template-columns: 1fr 1fr; }
-  .hero-inner { padding: 60px 28px; }
+  .hero-inner { padding: 60px 28px; gap: 32px; }
   .brands-inner { padding: 0 28px; }
-  .footer-grid { padding: 0 28px; }
-  .footer-bottom { padding: 22px 28px; }
+  .about-grid { grid-template-columns: 1fr; gap: 36px; }
+  .hero-title { font-size: clamp(2.8rem, 5vw, 4.5rem); }
+  .distribution-grid { gap: 36px; }
+  .careers-intro { gap: 36px; }
+  .contact-inner { gap: 36px; }
+  .anniversary-card, .why-choose { padding: 52px 36px; }
+  .page-hero { padding: 130px 28px 70px; }
+  .page-hero-inner { gap: 32px; }
+  .section-title { font-size: clamp(1.8rem, 3.2vw, 2.6rem); }
+  .brands-page-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
+/* ── Mobile (≤768px) ── */
 @media (max-width: 768px) {
+  /* Navbar */
+  .navbar-inner { padding: 0 16px; height: 64px; }
   .navbar-nav { display: none; }
   .hamburger { display: flex; }
-  .mobile-menu { display: flex; }
-  .hero-inner { grid-template-columns: 1fr; padding: 40px 20px; }
-  .hero-image { order: -1; }
+  .mobile-menu { display: flex; padding: 8px 16px 16px; }
+  .mobile-menu .nav-link { padding: 11px 0; font-size: 1rem; border-bottom: 1px solid var(--border-light); }
+
+  /* Hero */
+  .hero { min-height: auto; }
+  .hero-inner { grid-template-columns: 1fr; padding: 32px 16px 0; gap: 20px; text-align: center; }
+  .hero-image { order: -1; max-width: 300px; margin: 0 auto; }
   .hero-badge { display: none; }
-  .hero-title { font-size: 2.6rem; }
+  .hero-title { font-size: 2.4rem; letter-spacing: -0.03em; }
+  .hero-eyebrow { justify-content: center; }
+  .hero-subtitle { margin: 0 auto 28px; font-size: 0.95rem; }
+  .hero-cta { justify-content: center; }
+  .hero-trust { margin: 0 auto; }
+
+  /* Stats */
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat-item { padding: 20px 16px; gap: 12px; }
+  .stat-text .number { font-size: 1.5rem; }
+  .stat-text .label { font-size: 0.72rem; }
+  .stat-icon { width: 40px; height: 40px; border-radius: 10px; }
+
+  /* Products section home */
+  .products-section { padding: 60px 0; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .products-header { margin-bottom: 32px; }
+
+  /* Bottom split */
   .bottom-split { grid-template-columns: 1fr; }
-  .anniversary-card, .why-choose { padding: 44px 28px; }
-  .products-grid { grid-template-columns: repeat(2, 1fr); }
-  .products-full-grid { grid-template-columns: repeat(2, 1fr); }
-  .page-hero { padding: 140px 24px 70px; }
-  .page-hero-inner { grid-template-columns: 1fr; }
-  .page-hero-image { display: none; }
-  .about-grid { grid-template-columns: 1fr; }
-  .distribution-grid { grid-template-columns: 1fr; }
-  .careers-intro { grid-template-columns: 1fr; }
-  .contact-inner { grid-template-columns: 1fr; }
-  .brands-inner { grid-template-columns: 1fr; gap: 32px; }
+  .anniversary-card { padding: 44px 24px; }
+  .anniversary-years { font-size: 5rem; }
+  .anniversary-title { font-size: 1.3rem; }
+  .why-choose { padding: 44px 24px; }
+  .why-choose h2 { font-size: 1.5rem; margin-bottom: 24px; }
+  .why-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Brands section */
+  .brands-section { padding: 48px 0; }
+  .brands-inner { grid-template-columns: 1fr; gap: 28px; padding: 0 16px; }
   .brands-right { text-align: left; }
-  .brands-right h3 { text-align: left; margin-left: 0; }
-  .brands-page-grid { grid-template-columns: 1fr 1fr; }
-  .footer-grid { grid-template-columns: 1fr 1fr; padding: 0 24px; }
-  .footer-bottom { padding: 20px 24px; }
-  .anniversary-years { font-size: 4.5rem; }
-  .brands-stats-bar { grid-template-columns: 1fr 1fr; padding: 28px 24px; }
-  .quality-badges { grid-template-columns: 1fr 1fr; padding: 28px 24px; }
-  .careers-cta-bar { flex-direction: column; padding: 32px 24px; }
+  .brands-right h3 { text-align: left; margin-left: 0; max-width: 100%; }
+  .brands-logos { gap: 10px; }
+  .brand-logo-card { min-width: 100px; padding: 12px 16px; font-size: 0.95rem; }
+
+  /* Page hero (inner pages) */
+  .page-hero { padding: 110px 16px 52px; }
+  .page-hero-inner { grid-template-columns: 1fr; gap: 0; }
+  .page-hero-image { display: none; }
+  .page-hero-content h1 { font-size: 2.1rem; }
+  .page-hero-content p { font-size: 0.9rem; }
+  .page-hero-orb { display: none; }
+
+  /* About page */
+  .about-section { padding: 56px 0; }
+  .about-grid { grid-template-columns: 1fr; gap: 28px; }
+  .about-image-wrap img { height: 240px; }
+  .about-values { grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+  .value-card { padding: 20px 16px; }
+
+  /* Distribution page */
+  .distribution-section { padding: 56px 0; }
+  .distribution-grid { grid-template-columns: 1fr; gap: 32px; }
+  .distribution-stats { grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+  .dist-stat-card { padding: 20px 12px; }
+  .dist-stat-card .number { font-size: 1.6rem; }
+  .lahore-map { aspect-ratio: 4/3; }
+
+  /* Products page */
+  .products-page-section { padding: 56px 0; }
+  .products-full-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .filter-tabs { gap: 7px; }
+  .filter-tab { padding: 8px 14px; font-size: 0.8rem; }
+  .quality-badges { grid-template-columns: 1fr 1fr; padding: 28px 20px; margin-top: 40px; border-radius: var(--radius-lg); gap: 20px; }
+  .quality-badge span { font-size: 0.8rem; }
+
+  /* Brands page */
+  .brands-page-section { padding: 56px 0; }
+  .brands-page-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .brand-page-card { padding: 28px 16px; min-height: 130px; }
+  .brand-page-card .brand-name { font-size: 1.3rem; }
+  .brands-stats-bar { grid-template-columns: 1fr 1fr; padding: 24px 20px; gap: 16px; border-radius: var(--radius-lg); }
+  .brand-stat { padding: 0 12px; }
+  .brand-stat .number { font-size: 1.6rem; }
+
+  /* Careers page */
+  .careers-section { padding: 56px 0; }
+  .careers-intro { grid-template-columns: 1fr; gap: 32px; margin-bottom: 40px; }
+  .careers-image img { height: 260px; }
+  .careers-values { grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+  .career-value-card { padding: 20px 14px; }
+  .careers-cta-bar { flex-direction: column; padding: 28px 20px; text-align: center; border-radius: var(--radius-lg); margin-top: 32px; }
+  .careers-cta-bar h3 { font-size: 1.1rem; }
   .careers-cta-bar .cta-btns { flex-direction: column; width: 100%; }
-  .contact-form { position: static; padding: 28px; }
+  .careers-cta-bar .cta-btns a { width: 100%; justify-content: center; }
+
+  /* Contact page */
+  .contact-section { padding: 56px 0; }
+  .contact-inner { grid-template-columns: 1fr; gap: 28px; }
+  .contact-form { position: static; padding: 24px 20px; border-radius: var(--radius-lg); }
+  .contact-form h3 { font-size: 1.2rem; margin-bottom: 20px; }
+  .contact-info-item { padding: 14px; gap: 12px; margin-bottom: 14px; }
+
+  /* Footer */
+  .footer-main { padding: 48px 0 28px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; padding: 0 16px; }
+  .footer-brand { grid-column: 1 / -1; }
+  .footer-brand p { max-width: 100%; }
+  .footer-bottom { padding: 18px 16px; flex-direction: column; gap: 8px; text-align: center; }
+
+  /* Typography */
+  .section-title { font-size: 1.75rem; }
+  .section-label { font-size: 0.65rem; }
+  .section-divider { margin: 12px 0 32px; }
 }
 
+/* ── Small Mobile (≤480px) ── */
 @media (max-width: 480px) {
-  .products-grid { grid-template-columns: 1fr; }
+  /* Hero */
+  .hero-inner { padding: 24px 12px 0; }
+  .hero-title { font-size: 1.95rem; }
+  .hero-cta { flex-direction: column; align-items: center; gap: 12px; }
+  .hero-cta .btn-primary,
+  .hero-cta .btn-outline { width: 100%; max-width: 280px; justify-content: center; }
+  .hero-trust { width: 100%; max-width: 300px; }
+  .hero-eyebrow span { font-size: 0.63rem; }
+  .hero-image { max-width: 260px; }
+
+  /* Stats */
+  .stats-inner { grid-template-columns: 1fr 1fr; }
+  .stat-item { padding: 16px 12px; gap: 10px; }
+  .stat-text .number { font-size: 1.3rem; }
+  .stat-icon { width: 34px; height: 34px; }
+  .stat-icon svg { width: 16px; height: 16px; }
+
+  /* Products */
+  .products-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .products-full-grid { grid-template-columns: 1fr; }
+  .filter-tab { padding: 7px 12px; font-size: 0.75rem; }
+  .quality-badges { grid-template-columns: 1fr; gap: 14px; }
+
+  /* Grids */
   .about-values { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .distribution-stats { grid-template-columns: 1fr; }
   .careers-values { grid-template-columns: 1fr; }
-  .brands-page-grid { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; }
+  .brands-stats-bar { grid-template-columns: 1fr 1fr; }
+  .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+
+  /* Cards */
+  .anniversary-years { font-size: 4rem; }
+  .anniversary-card { padding: 36px 20px; }
+  .anniversary-title { font-size: 1.1rem; }
+  .why-choose { padding: 36px 20px; }
+
+  /* Page hero */
+  .page-hero { padding: 96px 14px 44px; }
+  .page-hero-content h1 { font-size: 1.85rem; }
+
+  /* Brands */
+  .brand-logo-card { min-width: 88px; padding: 10px 12px; font-size: 0.85rem; min-height: 50px; }
+
+  /* Footer */
+  .footer-grid { padding: 0 14px; }
+  .footer-bottom { padding: 16px 14px; }
+
+  /* Typography */
+  .section-title { font-size: 1.5rem; }
+  .container { padding: 0 14px; }
+  .about-inner, .distribution-inner, .products-page-inner,
+  .brands-page-inner, .careers-inner { padding: 0 14px; }
+}
+
+/* ── Very Small (≤360px) ── */
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.7rem; }
   .stats-inner { grid-template-columns: 1fr; }
-  .hero-inner { padding: 32px 16px; }
+  .products-grid { grid-template-columns: 1fr; }
+  .brands-page-grid { grid-template-columns: 1fr; }
+  .navbar-logo-text { font-size: 1.1rem; }
+  .section-title { font-size: 1.35rem; }
 }
 
 /* RTL Support */
@@ -1292,6 +1443,7 @@ ul { list-style: none; }
 [dir="rtl"] .footer-grid { direction: rtl; }
 [dir="rtl"] .hero-content { text-align: right; }
 [dir="rtl"] .hero-cta { flex-direction: row-reverse; }
+[dir="rtl"] .hero-eyebrow { flex-direction: row-reverse; }
 [dir="rtl"] .stat-item { flex-direction: row-reverse; }
 [dir="rtl"] .brands-inner { direction: rtl; }
 [dir="rtl"] .brands-right { text-align: left; }
@@ -1304,3 +1456,8 @@ ul { list-style: none; }
 [dir="rtl"] .footer-contact-item { flex-direction: row-reverse; }
 [dir="rtl"] .section-label { flex-direction: row-reverse; }
 [dir="rtl"] .footer-col ul li a { flex-direction: row-reverse; }
+[dir="rtl"] .hero-trust { flex-direction: row-reverse; }
+[dir="rtl"] .contact-info-item:hover { transform: translateX(-4px); }
+
+/* end of file */
+
