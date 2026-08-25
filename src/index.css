@@ -1259,18 +1259,22 @@ ul { list-style: none; }
   backdrop-filter: blur(4px);
 }
 
+/* Full-screen flex container that centers the modal box */
+.modal-center-wrap {
+  position: fixed; inset: 0; z-index: 2001;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px;
+}
+
+/* The actual modal box — no transform positioning needed */
 .product-modal {
-  position: fixed;
-  z-index: 2001;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: min(92vw, 860px);
   max-height: 90vh;
   background: var(--white);
   border-radius: 24px;
   overflow: hidden;
   box-shadow: 0 32px 80px rgba(0,0,0,0.30);
+  position: relative;
 }
 
 .modal-close {
