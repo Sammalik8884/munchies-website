@@ -67,8 +67,8 @@ export const products = [
 ]
 
 export const partnerBrands = [
-  { id: 1, name: 'TREET', className: 'treet', logo: brandTreet },
-  { id: 2, name: 'KOLSON', className: 'kolson', logo: brandKolson },
-  { id: 3, name: 'MilkFields', className: 'milkfields', logo: brandMilkfields },
-  { id: 4, name: '& Many More', className: 'more', logo: null },
+  { id: 1, name: 'TREET', tagline: "It's a Treet Thing", className: 'treet', logo: brandTreet },
+  { id: 2, name: 'KOLSON', tagline: 'From Nature to You', className: 'kolson', logo: brandKolson },
+  { id: 3, name: 'MilkFields', tagline: 'Fresh From the Fields', className: 'milkfields', logo: brandMilkfields },
+  { id: 4, name: '& Many More', tagline: 'More great brands coming', className: 'more', logo: null },
 ]

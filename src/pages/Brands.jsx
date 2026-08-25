@@ -63,7 +63,15 @@ export default function Brands() {
                 whileHover={{ scale: 1.04, y: -6 }}
                 id={`brand-card-${brand.className}`}
               >
-                <div className="brand-name">{brand.name}</div>
+                {brand.logo ? (
+                  <img
+                    src={brand.logo}
+                    alt={brand.name}
+                    style={{ width: '100%', maxHeight: 90, objectFit: 'contain' }}
+                  />
+                ) : (
+                  <div className="brand-name">{brand.name}</div>
+                )}
                 <div className="brand-tag">{brand.tagline}</div>
               </motion.div>
             ))}
