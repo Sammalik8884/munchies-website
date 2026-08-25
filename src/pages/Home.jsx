@@ -63,7 +63,8 @@ export default function Home() {
   const statItems = [
     { icon: <Award size={24} />, number: '50+', label: stats.brands },
     { icon: <Truck size={24} />, number: '5000+', label: stats.outlets },
-    { icon: <MapPin size={24} />, number: 'Half of', label: 'Lahore Covered' },
+    { icon: <MapPin size={24} />, number: 'Lahore', label: 'Covered' },
+
     { icon: <Trophy size={24} />, number: '2+', label: stats.trust },
   ]
 

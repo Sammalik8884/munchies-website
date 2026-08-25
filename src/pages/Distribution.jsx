@@ -13,43 +13,97 @@ const container = {
   show: { transition: { staggerChildren: 0.12 } },
 }
 
-/* Lahore SVG Map representation */
+/* Real Pakistan SVG Map with Lahore fully highlighted */
 function LahoreMap() {
   return (
     <div className="lahore-map">
       <div className="map-placeholder">
-        <svg viewBox="0 0 300 360" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: 200, height: 240 }}>
-          {/* Simple Lahore district silhouette */}
+        <svg
+          viewBox="0 0 500 520"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          style={{ width: '100%', maxWidth: 300, height: 'auto' }}
+        >
+          {/* ── Pakistan outline (simplified paths per province) ── */}
+
+          {/* Balochistan — largest, bottom-left */}
           <path
-            d="M80 20 L220 20 L260 80 L280 160 L270 240 L220 300 L160 340 L100 320 L50 260 L30 180 L40 100 Z"
-            fill="#DDDDDD"
-            stroke="#BBBBBB"
-            strokeWidth="2"
+            d="M 60 200 L 30 220 L 20 260 L 25 310 L 40 350 L 70 390 L 110 420 L 160 440 L 200 450 L 230 445 L 250 430 L 255 400 L 240 370 L 235 340 L 245 310 L 240 280 L 220 260 L 200 240 L 175 225 L 150 215 L 120 210 L 90 205 Z"
+            fill="#E8E8E8" stroke="#BDBDBD" strokeWidth="1.5"
           />
-          {/* Covered half - highlighted in red */}
+
+          {/* Sindh — bottom-right */}
           <path
-            d="M80 20 L160 20 L160 340 L100 320 L50 260 L30 180 L40 100 Z"
+            d="M 240 280 L 245 310 L 235 340 L 240 370 L 255 400 L 270 430 L 300 450 L 330 460 L 360 455 L 380 440 L 390 420 L 385 395 L 370 375 L 355 350 L 345 320 L 340 290 L 330 270 L 310 255 L 285 250 L 265 255 Z"
+            fill="#E0E0E0" stroke="#BDBDBD" strokeWidth="1.5"
+          />
+
+          {/* KPK — top-left */}
+          <path
+            d="M 70 60 L 55 80 L 45 110 L 50 140 L 60 160 L 80 175 L 100 180 L 120 175 L 140 165 L 155 148 L 160 130 L 155 110 L 145 90 L 130 72 L 110 62 Z"
+            fill="#DADADA" stroke="#BDBDBD" strokeWidth="1.5"
+          />
+
+          {/* FATA/GB area — very top */}
+          <path
+            d="M 80 20 L 60 40 L 60 60 L 80 65 L 110 62 L 140 55 L 165 45 L 175 30 L 165 18 L 140 12 L 110 15 Z"
+            fill="#D0D0D0" stroke="#BDBDBD" strokeWidth="1.5"
+          />
+
+          {/* AJK — top-right of KPK */}
+          <path
+            d="M 155 90 L 170 80 L 190 75 L 205 85 L 210 105 L 200 120 L 185 130 L 170 128 L 158 115 Z"
+            fill="#CFCFCF" stroke="#BDBDBD" strokeWidth="1.5"
+          />
+
+          {/* Punjab (excluding Lahore highlight) */}
+          <path
+            d="M 120 175 L 140 165 L 165 148 L 185 130 L 200 120 L 220 115 L 245 120 L 265 130 L 280 148 L 285 170 L 280 195 L 265 215 L 245 230 L 220 240 L 200 240 L 175 225 L 150 215 L 130 205 L 115 195 Z"
+            fill="#D5D5D5" stroke="#BDBDBD" strokeWidth="1.5"
+          />
+
+          {/* Lahore district — FULLY highlighted in red */}
+          <path
+            d="M 195 148 L 215 142 L 235 148 L 248 162 L 252 178 L 248 194 L 235 205 L 218 210 L 200 207 L 186 196 L 181 180 L 185 165 Z"
             fill="#CC0000"
-            opacity="0.8"
+            opacity="0.92"
+            stroke="#990000"
+            strokeWidth="1.5"
           />
-          {/* Map pin */}
-          <circle cx="120" cy="160" r="12" fill="#FFFFFF" />
-          <circle cx="120" cy="160" r="7" fill="#CC0000" />
-          {/* Grid lines */}
-          <line x1="0" y1="120" x2="300" y2="120" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-          <line x1="0" y1="200" x2="300" y2="200" strokeDasharray="4" stroke="rgba(255,255,255,0.3)" strokeWidth="1" />
-          <line x1="160" y1="0" x2="160" y2="360" stroke="rgba(255,255,255,0.4)" strokeWidth="1.5" />
+
+          {/* Lahore pulsing dot */}
+          <circle cx="216" cy="178" r="6" fill="#FFFFFF" opacity="0.95" />
+          <circle cx="216" cy="178" r="3.5" fill="#CC0000" />
+
+          {/* LAHORE label */}
+          <rect x="175" y="215" width="82" height="22" rx="11" fill="#CC0000" />
+          <text x="216" y="230" textAnchor="middle" fill="white"
+            fontFamily="'Poppins', sans-serif" fontWeight="700" fontSize="10">
+            LAHORE
+          </text>
+
+          {/* Arabian Sea label */}
+          <text x="330" y="490" textAnchor="middle" fill="#AAAAAA"
+            fontFamily="'Poppins', sans-serif" fontSize="8" fontStyle="italic">
+            Arabian Sea
+          </text>
+
+          {/* India border dashes */}
+          <line x1="285" y1="130" x2="390" y2="300" stroke="#CCCCCC" strokeWidth="1" strokeDasharray="5,3" />
+          <line x1="390" y1="300" x2="385" y2="395" stroke="#CCCCCC" strokeWidth="1" strokeDasharray="5,3" />
         </svg>
+
         <div className="map-pin-label">
           <MapPin size={14} /> LAHORE
         </div>
-        <div style={{ fontSize: '0.8rem', color: 'var(--text-light)', textAlign: 'center', marginTop: 8 }}>
-          <span style={{ color: 'var(--primary)', fontWeight: 700 }}>■</span> Half of Lahore Covered
+        <div style={{ fontSize: '0.8rem', color: 'var(--text-light)', textAlign: 'center', marginTop: 8, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6 }}>
+          <span style={{ color: 'var(--primary)', fontWeight: 700 }}>■</span> Lahore Covered
         </div>
       </div>
     </div>
   )
 }
+
 
 export default function Distribution() {
   const { t } = useLanguage()
