@@ -5,6 +5,10 @@ import crunchBites from '../assets/images/crunch_bites.png'
 import sourDips from '../assets/images/sour_dips.png'
 import cocoaCone from '../assets/images/cocoa_cone.png'
 
+import brandTreet from '../assets/images/brand_treet.jpg'
+import brandKolson from '../assets/images/brand_kolson.png'
+import brandMilkfields from '../assets/images/brand_milkfields.png'
+
 export const products = [
   {
     id: 1,
@@ -63,8 +67,8 @@ export const products = [
 ]
 
 export const partnerBrands = [
-  { id: 1, name: 'TREET', tagline: "It's a Treet Thing", className: 'treet' },
-  { id: 2, name: 'KOLSON', tagline: 'From Nature to You', className: 'kolson' },
-  { id: 3, name: 'MilkFields', tagline: 'From Nature to You', className: 'milkfields' },
-  { id: 4, name: '& Many More', tagline: 'More great brands', className: 'more' },
+  { id: 1, name: 'TREET', className: 'treet', logo: brandTreet },
+  { id: 2, name: 'KOLSON', className: 'kolson', logo: brandKolson },
+  { id: 3, name: 'MilkFields', className: 'milkfields', logo: brandMilkfields },
+  { id: 4, name: '& Many More', className: 'more', logo: null },
 ]

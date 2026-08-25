@@ -286,7 +286,19 @@ export default function Home() {
                   transition={{ type: 'spring', stiffness: 260, damping: 18 }}
                   id={`home-brand-${brand.className}`}
                 >
-                  {brand.name}
+                  {brand.logo ? (
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      style={{
+                        width: '100%', height: '100%',
+                        objectFit: 'contain',
+                        borderRadius: 8,
+                      }}
+                    />
+                  ) : (
+                    brand.name
+                  )}
                 </motion.div>
               ))}
             </div>

@@ -684,30 +684,31 @@ ul { list-style: none; }
 .brands-logos { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 
 .brand-logo-card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.95);
+  border: 1px solid rgba(255,255,255,0.15);
   border-radius: var(--radius-sm);
-  padding: 18px 26px;
+  padding: 12px 16px;
   display: flex; align-items: center; justify-content: center;
-  min-width: 130px; min-height: 68px;
+  min-width: 130px; min-height: 80px;
   font-family: var(--font-heading); font-weight: 900; font-size: 1.15rem;
   transition: var(--transition); cursor: pointer;
-  backdrop-filter: blur(8px);
+  overflow: hidden;
 }
 .brand-logo-card:hover {
-  background: rgba(255,255,255,0.95);
+  background: #fff;
   border-color: transparent;
   transform: translateY(-5px);
   box-shadow: 0 12px 36px rgba(0,0,0,0.4);
 }
-.brand-logo-card.treet { color: rgba(227, 30, 36, 0.7); }
-.brand-logo-card.treet:hover { color: #E31E24; }
-.brand-logo-card.kolson { color: rgba(0, 48, 135, 0.7); }
-.brand-logo-card.kolson:hover { color: #003087; }
-.brand-logo-card.milkfields { color: rgba(46, 125, 50, 0.7); }
-.brand-logo-card.milkfields:hover { color: #2E7D32; }
-.brand-logo-card.more { color: rgba(255,255,255,0.5); font-size: 0.9rem; }
-.brand-logo-card.more:hover { color: var(--text-medium); }
+/* "& Many More" text only card */
+.brand-logo-card.more {
+  background: rgba(255,255,255,0.07);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  border: 1px solid rgba(255,255,255,0.10);
+}
+.brand-logo-card.more:hover { color: white; background: rgba(255,255,255,0.12); }
+
 
 .brands-right { text-align: right; }
 .brands-right h3 {
