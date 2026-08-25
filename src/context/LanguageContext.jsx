@@ -66,7 +66,7 @@ export const translations = {
       copyright: '© 2024 Munchies. All Rights Reserved.',
       designed: 'Designed with',
       inPakistan: 'in Pakistan',
-      address: '23-AM, Ferozpur Road, Lahore, Pakistan',
+      address: 'Lahore, Pakistan',
       phone: '+92 335 1497701',
       whatsapp: '+92 335 1497701',
       email: 'Munchiespk24@gmail.com',
@@ -129,7 +129,7 @@ export const translations = {
     contact_page: {
       label: 'CONTACT US',
       title: "We'd love to hear from you.",
-      address: { label: 'Head Office', value: '23-AM, Ferozpur Road, Lahore, Pakistan' },
+      address: { label: 'Head Office', value: 'Lahore, Pakistan' },
       phone: { label: 'Phone / WhatsApp', value: '+92 335 1497701' },
       email: { label: 'Email', value: 'Munchiespk24@gmail.com' },
 

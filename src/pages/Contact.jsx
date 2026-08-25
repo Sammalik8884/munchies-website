@@ -114,7 +114,7 @@ export default function Contact() {
                   Find Us on the Map
                 </div>
                 <div style={{ fontSize: '0.8rem', color: 'var(--text-light)', marginTop: 2 }}>
-                  23-AM, Ferozpur Road, Lahore, Pakistan
+                  Lahore, Pakistan
                 </div>
               </div>
             </motion.div>
