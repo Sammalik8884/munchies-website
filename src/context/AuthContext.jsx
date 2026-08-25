@@ -32,16 +32,20 @@ export function AuthProvider({ children }) {
     setCurrentUser(publicUser)
     localStorage.setItem('munchies_current_user', JSON.stringify(publicUser))
 
-    /* Forward signup info to Munchies email via mailto */
-    const subject = encodeURIComponent('New Munchies Website Registration')
-    const body = encodeURIComponent(
-      `A new user has registered on the Munchies website:\n\n` +
-      `Name:  ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone || 'Not provided'}\n\n` +
-      `Registered at: ${new Date().toLocaleString('en-PK', { timeZone: 'Asia/Karachi' })}`
-    )
-    window.open(`mailto:Munchiespk24@gmail.com?subject=${subject}&body=${body}`)
+    /* Silently send signup info to Munchies email — no browser navigation */
+    fetch('https://formsubmit.co/ajax/Munchiespk24@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        _subject: 'New Munchies Website Registration',
+        Name: name,
+        Email: email,
+        Phone: phone || 'Not provided',
+        'Registered At': new Date().toLocaleString('en-PK', { timeZone: 'Asia/Karachi' }),
+        _template: 'table',
+        _captcha: 'false',
+      }),
+    }).catch(() => { /* silent fail — user experience not affected */ })
 
     return { success: true }
   }
