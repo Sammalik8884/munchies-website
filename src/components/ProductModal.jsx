@@ -43,9 +43,9 @@ export default function ProductModal({ product, onClose }) {
           <motion.div
             key="modal"
             className="product-modal"
-            initial={{ opacity: 0, scale: 0.88, y: 40 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.88, y: 40 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.9 }}
             transition={{ type: 'spring', stiffness: 340, damping: 28 }}
             role="dialog"
             aria-modal="true"
