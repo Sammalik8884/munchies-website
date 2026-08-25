@@ -460,6 +460,18 @@ ul { list-style: none; }
   50% { transform: translateY(-12px) rotate(0.5deg); }
 }
 
+/* ================================================
+   TRUST BAR — below stats bar
+   ================================================ */
+
+.hero-trust-bar {
+  background: var(--bg-cream);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid var(--border-light);
+}
+
 /* Floating badge on hero */
 .hero-badge {
   position: absolute;

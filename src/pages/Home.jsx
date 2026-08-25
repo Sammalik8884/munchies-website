@@ -105,23 +105,6 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            <motion.div className="hero-trust" variants={fadeUp}>
-              <div className="hero-trust-avatars">
-                {['AR', 'MK', 'SF', 'ZA'].map((initials, i) => (
-                  <div
-                    key={i}
-                    className="hero-trust-avatar"
-                    style={{ background: `hsl(${i * 40}, 70%, 40%)` }}
-                  >
-                    {initials}
-                  </div>
-                ))}
-              </div>
-              <div className="hero-trust-text">
-                <strong>5000+ Retail Partners</strong>
-                <span>Trust us across Lahore ⭐⭐⭐⭐⭐</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* RIGHT — Image with floating badges */}
@@ -187,6 +170,33 @@ export default function Home() {
           ))}
         </motion.div>
       </section>
+
+      {/* ── TRUST WIDGET — after stats bar ─────────────── */}
+      <motion.div
+        className="hero-trust-bar"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.55 }}
+      >
+        <div className="hero-trust">
+          <div className="hero-trust-avatars">
+            {['AR', 'MK', 'SF', 'ZA'].map((initials, i) => (
+              <div
+                key={i}
+                className="hero-trust-avatar"
+                style={{ background: `hsl(${i * 40}, 70%, 40%)` }}
+              >
+                {initials}
+              </div>
+            ))}
+          </div>
+          <div className="hero-trust-text">
+            <strong>5000+ Retail Partners</strong>
+            <span>Trust us across Lahore ⭐⭐⭐⭐⭐</span>
+          </div>
+        </div>
+      </motion.div>
 
       {/* ── OUR CONFECTIONERY ─────────────────────────── */}
       <section className="products-section">
