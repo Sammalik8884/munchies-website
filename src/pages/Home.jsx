@@ -268,16 +268,32 @@ export default function Home() {
 
       {/* ── PARTNER BRANDS ────────────────────────────── */}
       <section className="brands-section">
-        <div className="brands-inner">
+        <div className="brands-inner-v2">
+
+          {/* ROW 1 — Heading + CTA button */}
           <motion.div
-            className="brands-left"
-            initial={{ opacity: 0, x: -36 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            className="brands-top-row"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
+            transition={{ duration: 0.55 }}
           >
-            <p className="label">{pb.label}</p>
-            <div className="brands-logos">
+            <h3 className="brands-heading">{pb.distributor}</h3>
+            <Link to="/distribution" className="btn-primary" id="home-explore-distribution">
+              {pb.explore} <ArrowRight size={14} />
+            </Link>
+          </motion.div>
+
+          {/* ROW 2 — Label + Logo cards */}
+          <motion.div
+            className="brands-bottom-row"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.55, delay: 0.15 }}
+          >
+            <p className="label" style={{ marginBottom: 16 }}>{pb.label}</p>
+            <div className="brands-logos-row">
               {partnerBrands.map((brand) => (
                 <motion.div
                   key={brand.id}
@@ -296,18 +312,6 @@ export default function Home() {
             </div>
           </motion.div>
 
-          <motion.div
-            className="brands-right"
-            initial={{ opacity: 0, x: 36 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.65 }}
-          >
-            <h3>{pb.distributor}</h3>
-            <Link to="/distribution" className="btn-primary" id="home-explore-distribution">
-              {pb.explore} <ArrowRight size={14} />
-            </Link>
-          </motion.div>
         </div>
       </section>
 
