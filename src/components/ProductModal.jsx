@@ -3,8 +3,9 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { X, Tag, Star, ShieldCheck, Link as LinkIcon } from 'lucide-react'
 
 export default function ProductModal({ product, onClose }) {
-  /* Close on Escape key */
+  /* Close on Escape key + lock scroll only when modal is open */
   useEffect(() => {
+    if (!product) return
     const handler = (e) => { if (e.key === 'Escape') onClose() }
     window.addEventListener('keydown', handler)
     document.body.style.overflow = 'hidden'
@@ -12,7 +13,7 @@ export default function ProductModal({ product, onClose }) {
       window.removeEventListener('keydown', handler)
       document.body.style.overflow = ''
     }
-  }, [onClose])
+  }, [product, onClose])
 
   const colorMap = {
     yellow: '#F59E0B',
