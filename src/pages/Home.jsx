@@ -287,15 +287,7 @@ export default function Home() {
                   id={`home-brand-${brand.className}`}
                 >
                   {brand.logo ? (
-                    <img
-                      src={brand.logo}
-                      alt={brand.name}
-                      style={{
-                        width: '100%', height: '100%',
-                        objectFit: 'contain',
-                        borderRadius: 8,
-                      }}
-                    />
+                    <img src={brand.logo} alt={brand.name} />
                   ) : (
                     brand.name
                   )}
