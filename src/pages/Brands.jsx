@@ -72,7 +72,6 @@ export default function Brands() {
                 ) : (
                   <div className="brand-name">{brand.name}</div>
                 )}
-                <div className="brand-tag">{brand.tagline}</div>
               </motion.div>
             ))}
           </motion.div>
