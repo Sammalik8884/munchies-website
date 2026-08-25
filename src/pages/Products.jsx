@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ShieldCheck, Leaf, Star, Heart, ArrowRight } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { products } from '../data/products'
 import PageTransition from '../components/PageTransition'
+import ProductModal from '../components/ProductModal'
 import heroProducts from '../assets/images/hero_products.png'
 
 const fadeUp = {
@@ -20,6 +20,7 @@ export default function Products() {
   const { t } = useLanguage()
   const pp = t.products_page
   const [activeFilter, setActiveFilter] = useState(pp.filters[0])
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const filtered = activeFilter === pp.filters[0]
     ? products
@@ -34,6 +35,8 @@ export default function Products() {
 
   return (
     <PageTransition>
+      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+
       {/* Page Hero */}
       <section className="page-hero" style={{ background: 'linear-gradient(135deg, #1A1A1A 60%, #8B0000 100%)' }}>
         <div className="page-hero-inner">
@@ -114,14 +117,14 @@ export default function Products() {
                   <div className="product-card-body">
                     <h3 className="product-card-name">{product.name}</h3>
                     <p className="product-card-desc">{product.detailDesc}</p>
-                    <Link
-                      to="/contact"
+                    <button
                       className="btn-primary"
-                      id={`product-enquire-${product.id}`}
+                      id={`product-view-${product.id}`}
                       style={{ fontSize: '0.75rem', padding: '8px 16px' }}
+                      onClick={() => setSelectedProduct(product)}
                     >
                       {t.products.viewDetails}
-                    </Link>
+                    </button>
                   </div>
                 </motion.div>
               ))}

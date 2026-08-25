@@ -9,6 +9,7 @@ import {
 import { useLanguage } from '../context/LanguageContext'
 import { products, partnerBrands } from '../data/products'
 import PageTransition from '../components/PageTransition'
+import ProductModal from '../components/ProductModal'
 import heroProducts from '../assets/images/hero_products.png'
 
 /* ── Animated Counter ──────────────────────────────── */
@@ -59,6 +60,7 @@ export default function Home() {
 
   const statsRef = useRef()
   const statsInView = useInView(statsRef, { once: true, margin: '-50px' })
+  const [selectedProduct, setSelectedProduct] = useState(null)
 
   const statItems = [
     { icon: <Award size={24} />, number: '50+', label: stats.brands },
@@ -72,6 +74,8 @@ export default function Home() {
 
   return (
     <PageTransition>
+      <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+
       {/* ── HERO ──────────────────────────────────────── */}
       <section className="hero">
         <div className="hero-dots" />
@@ -236,13 +240,13 @@ export default function Home() {
                 <div className="product-card-body">
                   <h3 className="product-card-name">{product.name}</h3>
                   <p className="product-card-desc">{product.desc}</p>
-                  <Link
-                    to="/products"
+                  <button
                     className="btn-primary"
                     id={`home-view-${product.name.toLowerCase().replace(/\s/g, '-')}`}
+                    onClick={() => setSelectedProduct(product)}
                   >
                     {p.viewDetails}
-                  </Link>
+                  </button>
                 </div>
               </motion.div>
             ))}
