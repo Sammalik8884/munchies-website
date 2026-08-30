@@ -1670,16 +1670,16 @@ ul { list-style: none; }
 .nav-user-wrap { position: relative; }
 .nav-user-pill {
   display: flex; align-items: center; gap: 6px;
-  background: rgba(255,255,255,0.1);
-  border: 1.5px solid rgba(255,255,255,0.2);
-  color: var(--white);
+  background: rgba(0,0,0,0.05);
+  border: 1.5px solid rgba(0,0,0,0.22);
+  color: var(--text-dark);
   padding: 6px 14px;
   border-radius: 50px;
   font-size: 0.82rem; font-weight: 600;
   cursor: pointer; transition: var(--transition);
   white-space: nowrap;
 }
-.nav-user-pill:hover { background: rgba(255,255,255,0.18); }
+.nav-user-pill:hover { background: rgba(0,0,0,0.1); border-color: rgba(0,0,0,0.4); }
 
 /* User dropdown */
 .nav-user-dropdown {
