@@ -189,6 +189,17 @@ export default function Navbar() {
                   </NavLink>
                 </li>
               ))}
+              {/* Mobile lang toggle */}
+              <li className="mobile-lang-row">
+                <button
+                  className={`lang-btn ${lang === 'en' ? 'active' : ''}`}
+                  onClick={() => setLang('en')}
+                >EN</button>
+                <button
+                  className={`lang-btn ${lang === 'ur' ? 'active' : ''}`}
+                  onClick={() => setLang('ur')}
+                >اردو</button>
+              </li>
               {/* Mobile auth */}
               <li className="mobile-auth-row">
                 {currentUser ? (
