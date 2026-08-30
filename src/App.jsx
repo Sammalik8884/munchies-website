@@ -14,6 +14,7 @@ import Products from './pages/Products'
 import Brands from './pages/Brands'
 import Careers from './pages/Careers'
 import Contact from './pages/Contact'
+import AdminPanel from './pages/AdminPanel'
 
 // Scrolls to top on every route change
 function ScrollToTop() {
@@ -26,6 +27,7 @@ function ScrollToTop() {
 
 function App() {
   const location = useLocation()
+  const isAdmin = location.pathname === '/admin'
 
   return (
     <AuthProvider>
@@ -34,7 +36,7 @@ function App() {
           <CustomCursor />
           <ScrollProgress />
           <ScrollToTop />
-          <Navbar />
+          {!isAdmin && <Navbar />}
           <AnimatePresence mode="wait">
             <Routes location={location} key={location.pathname}>
               <Route path="/" element={<Home />} />
@@ -44,9 +46,10 @@ function App() {
               <Route path="/brands" element={<Brands />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/admin" element={<AdminPanel />} />
             </Routes>
           </AnimatePresence>
-          <Footer />
+          {!isAdmin && <Footer />}
         </div>
       </LanguageProvider>
     </AuthProvider>

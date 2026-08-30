@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useNavigate } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, User, LogOut, ChevronDown } from 'lucide-react'
+import { Menu, X, User, LogOut, ChevronDown, ShieldCheck } from 'lucide-react'
 import { useLanguage } from '../context/LanguageContext'
 import { useAuth } from '../context/AuthContext'
 import AuthModal from './AuthModal'
@@ -123,7 +123,19 @@ export default function Navbar() {
                       <div className="nav-user-info">
                         <strong>{currentUser.name}</strong>
                         <small>{currentUser.email}</small>
+                        {currentUser.isAdmin && (
+                          <span className="nav-admin-badge">Admin</span>
+                        )}
                       </div>
+                      {currentUser.isAdmin && (
+                        <Link
+                          to="/admin"
+                          className="nav-admin-link"
+                          onClick={() => setUserDropdown(false)}
+                        >
+                          <ShieldCheck size={14} /> Admin Panel
+                        </Link>
+                      )}
                       <button
                         className="nav-logout-btn"
                         onClick={() => { logout(); setUserDropdown(false) }}
