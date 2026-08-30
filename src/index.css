@@ -1922,6 +1922,28 @@ button, a, .btn-primary, .btn-outline,
   backdrop-filter: saturate(180%) blur(16px) !important;
   box-shadow: 0 1px 0 rgba(204,0,0,0.12), 0 4px 24px rgba(0,0,0,0.10) !important;
 }
+/* Login button — dark colors when navbar is white (scrolled) */
+.navbar.scrolled .nav-login-btn {
+  color: var(--text-dark) !important;
+  border-color: rgba(0,0,0,0.25) !important;
+}
+.navbar.scrolled .nav-login-btn:hover {
+  background: rgba(0,0,0,0.06) !important;
+  border-color: rgba(0,0,0,0.4) !important;
+}
+/* User pill — visible on white navbar */
+.navbar.scrolled .nav-user-pill {
+  color: var(--text-dark) !important;
+  border-color: rgba(0,0,0,0.2) !important;
+  background: rgba(0,0,0,0.05) !important;
+}
+/* Lang buttons — dark on scrolled */
+.navbar.scrolled .lang-btn {
+  color: var(--text-dark) !important;
+}
+.navbar.scrolled .lang-btn.active {
+  color: var(--primary) !important;
+}
 
 /* ── Premium Product Cards ── */
 .product-card {
