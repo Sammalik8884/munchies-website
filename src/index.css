@@ -1835,6 +1835,14 @@ ul { list-style: none; }
 /* Hide default cursor site-wide */
 *, *::before, *::after { cursor: none !important; }
 
+/* Strip underlines from all buttons & nav links */
+button, a, .btn-primary, .btn-outline,
+.nav-link, .nav-login-btn, .nav-signup-btn,
+.nav-user-pill, .nav-logout-btn, .auth-tab,
+.auth-switch button {
+  text-decoration: none !important;
+}
+
 /* Custom cursor ring */
 .cursor-ring {
   position: fixed;
@@ -1974,24 +1982,6 @@ ul { list-style: none; }
   pointer-events: none;
   z-index: 9998;
   opacity: 0.04;
-}
-
-/* ── Section link hover underline animate ── */
-.nav-link {
-  position: relative;
-}
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -2px; left: 0;
-  width: 0%; height: 2px;
-  background: var(--primary);
-  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: 2px;
-}
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
 }
 
 /* ── Premium scroll reveal ── */
