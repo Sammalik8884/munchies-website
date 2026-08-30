@@ -1916,11 +1916,11 @@ button, a, .btn-primary, .btn-outline,
   100% { left: 150%; }
 }
 
-/* ── Navbar glassmorphism upgrade ── */
+/* ── Navbar glassmorphism upgrade (white, not black) ── */
 .navbar.scrolled {
-  background: rgba(10, 10, 10, 0.82) !important;
-  backdrop-filter: saturate(180%) blur(20px) !important;
-  box-shadow: 0 1px 0 rgba(204,0,0,0.3), 0 8px 32px rgba(0,0,0,0.5) !important;
+  background: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: saturate(180%) blur(16px) !important;
+  box-shadow: 0 1px 0 rgba(204,0,0,0.12), 0 4px 24px rgba(0,0,0,0.10) !important;
 }
 
 /* ── Premium Product Cards ── */
