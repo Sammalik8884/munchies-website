@@ -5,6 +5,8 @@ import { LanguageProvider } from './context/LanguageContext'
 import { AuthProvider } from './context/AuthContext'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import CustomCursor from './components/CustomCursor'
+import ScrollProgress from './components/ScrollProgress'
 import Home from './pages/Home'
 import About from './pages/About'
 import Distribution from './pages/Distribution'
@@ -29,6 +31,8 @@ function App() {
     <AuthProvider>
       <LanguageProvider>
         <div className="app">
+          <CustomCursor />
+          <ScrollProgress />
           <ScrollToTop />
           <Navbar />
           <AnimatePresence mode="wait">

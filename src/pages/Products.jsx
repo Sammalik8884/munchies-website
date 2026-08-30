@@ -6,6 +6,7 @@ import { useLanguage } from '../context/LanguageContext'
 import { products } from '../data/products'
 import PageTransition from '../components/PageTransition'
 import ProductModal from '../components/ProductModal'
+import TiltCard from '../components/TiltCard'
 import heroProducts from '../assets/images/hero_products.png'
 
 const fadeUp = {
@@ -105,29 +106,31 @@ export default function Products() {
               exit={{ opacity: 0 }}
             >
               {filtered.map((product) => (
-                <motion.div
-                  className="product-card"
+                <TiltCard
                   key={product.id}
+                  className="product-card"
                   data-color={product.color}
-                  variants={fadeUp}
-                  whileHover={{ scale: 1.03, y: -6 }}
+                  maxTilt={10}
+                  scale={1.04}
                 >
-                  <div className="product-card-image" style={{ aspectRatio: '4/3' }}>
-                    <img src={product.image} alt={product.name} loading="lazy" />
-                  </div>
-                  <div className="product-card-body">
-                    <h3 className="product-card-name">{product.name}</h3>
-                    <p className="product-card-desc">{product.detailDesc}</p>
-                    <button
-                      className="btn-primary"
-                      id={`product-view-${product.id}`}
-                      style={{ fontSize: '0.75rem', padding: '8px 16px' }}
-                      onClick={() => setSelectedProduct(product)}
-                    >
-                      {t.products.viewDetails}
-                    </button>
-                  </div>
-                </motion.div>
+                  <motion.div variants={fadeUp} style={{ height: '100%' }}>
+                    <div className="product-card-image" style={{ aspectRatio: '4/3' }}>
+                      <img src={product.image} alt={product.name} loading="lazy" />
+                    </div>
+                    <div className="product-card-body">
+                      <h3 className="product-card-name">{product.name}</h3>
+                      <p className="product-card-desc">{product.detailDesc}</p>
+                      <button
+                        className="btn-primary"
+                        id={`product-view-${product.id}`}
+                        style={{ fontSize: '0.75rem', padding: '8px 16px' }}
+                        onClick={() => setSelectedProduct(product)}
+                      >
+                        {t.products.viewDetails}
+                      </button>
+                    </div>
+                  </motion.div>
+                </TiltCard>
               ))}
             </motion.div>
           </AnimatePresence>
