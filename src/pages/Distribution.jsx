@@ -191,7 +191,7 @@ export default function Distribution() {
             <h2 className="section-title" style={{ textAlign: 'center', marginBottom: 40 }}>
               How Our Distribution Works
             </h2>
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 24 }}>
+            <div className="dist-steps-grid">
               {[
                 { step: '01', title: 'Order Placement', desc: 'Retailers place orders through our sales team or directly.' },
                 { step: '02', title: 'Warehouse Processing', desc: 'Orders are picked, packed and verified at our central warehouse.' },
